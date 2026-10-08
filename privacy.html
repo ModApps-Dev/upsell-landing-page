@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Checkout Upsell Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased min-h-screen">
+  <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 font-bold text-white hover:text-blue-400 transition">
+        ← Back to Checkout Upsell Engine
+      </a>
+      <span class="text-xs font-semibold px-2.5 py-1 rounded bg-slate-800 text-slate-400">Shopify App Privacy Policy</span>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <h1 class="text-4xl font-extrabold text-white tracking-tight mb-2">Privacy Policy</h1>
+    <p class="text-sm text-slate-400 mb-12">Last Updated: October 8, 2026 • Effective Date: October 8, 2026</p>
+
+    <div class="space-y-10 text-slate-300 text-base leading-relaxed">
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-3">1. Introduction & Overview</h2>
+        <p>Checkout Upsell Engine ("we", "our", or "the App") is developed and operated by ModApps ("ModApps-Dev"). This Privacy Policy describes how we collect, process, and protect merchant and customer data when you install and use the Checkout Upsell Engine app on your Shopify store.</p>
+        <p class="mt-2">We are committed to full compliance with the European Union General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and Shopify's Partner Security & Privacy Requirements.</p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-3">2. Information We Collect</h2>
+        <p>When you install and use the App, we collect only the minimum required data to operate checkout extensibility features:</p>
+        <ul class="list-disc list-inside mt-3 space-y-2 text-slate-300">
+          <li><strong>Merchant Store Information:</strong> Store primary domain (e.g. <code>myshopify.com</code>), store owner email, installed app scopes, and app plan subscription status.</li>
+          <li><strong>Campaign Configuration:</strong> Threshold dollar amount, reward types, product variant IDs, order bump title, and add-on pricing configured in the Shopify Admin.</li>
+          <li><strong>Aggregated Telemetry Data:</strong> Total widget impression counts, bump conversions, and revenue lift amounts to calculate metrics on your dashboard.</li>
+        </ul>
+        <p class="mt-3 font-semibold text-emerald-400">Important: We NEVER collect, process, or store credit card numbers, CVVs, or full payment credentials. All payment processing is handled exclusively by Shopify's native PCI-DSS certified checkout infrastructure.</p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-3">3. How We Use Information</h2>
+        <p>We use the collected information solely for:</p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300">
+          <li>Rendering reactive Free Shipping progress bars and Order Bumps during checkout sessions.</li>
+          <li>Computing return on investment (ROI) analytics on your Polaris dashboard.</li>
+          <li>Processing recurring application charges through the official Shopify Billing API.</li>
+          <li>Diagnosing technical issues and delivering customer support.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-3">4. GDPR & Data Subject Rights</h2>
+        <p>We fully support automated GDPR compliance webhooks provided by Shopify:</p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300">
+          <li><strong>Customers Data Request (<code>customers/data_request</code>):</strong> We fulfill requests for any customer data within 30 days.</li>
+          <li><strong>Customers Redact (<code>customers/redact</code>):</strong> We automatically purge any requested personal data.</li>
+          <li><strong>Shop Redact (<code>shop/redact</code>):</strong> When a merchant uninstalls the App, all associated store sessions, campaign configurations, and analytics records are permanently purged within 48 hours.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-3">5. Data Storage & Security</h2>
+        <p>All database records are stored in encrypted PostgreSQL databases utilizing industry-standard TLS 1.3 encryption in transit and AES-256 encryption at rest. We never sell, rent, or trade merchant or customer data to third-party advertisers or data brokers.</p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-white mb-3">6. Contact & Data Protection Officer</h2>
+        <p>If you have any questions or wish to exercise your data privacy rights, please contact our support team:</p>
+        <div class="mt-4 p-5 rounded-xl bg-slate-900 border border-slate-800">
+          <p class="font-bold text-white">ModApps Data Protection Team</p>
+          <p class="text-sm text-slate-400 mt-1">Email: <a href="mailto:support@modapps.dev" class="text-blue-400 hover:underline">support@modapps.dev</a></p>
+          <p class="text-sm text-slate-400">Website: <a href="https://modapps.dev" class="text-blue-400 hover:underline">https://modapps.dev</a></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800 py-8 bg-slate-950 text-center text-xs text-slate-500">
+    &copy; 2026 ModApps Development. All rights reserved.
+  </footer>
+</body>
+</html>
