@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions — CartForge: Checkout Upsell</title>
+  <meta name="description" content="Find answers to common questions about CartForge Checkout Upsell, Checkout Extensibility installation, tiered milestone rules, and 1-click order bumps.">
+  <link rel="icon" type="image/jpeg" href="assets/app-icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: { brand: { 500: '#10b981', 600: '#059669' } }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased min-h-screen flex flex-col justify-between">
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 font-bold text-white hover:text-emerald-400 transition">
+        <img src="assets/app-icon.jpg" alt="CartForge Logo" class="w-8 h-8 rounded-lg object-cover">
+        <span>CartForge</span>
+      </a>
+      <nav class="flex items-center gap-6 text-sm font-medium text-slate-400">
+        <a href="tutorial.html" class="hover:text-white transition">Tutorial</a>
+        <a href="docs.html" class="hover:text-white transition">Documentation</a>
+        <a href="changelog.html" class="hover:text-white transition">Changelog</a>
+        <a href="privacy.html" class="hover:text-white transition">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-16 flex-1 w-full">
+    <div class="text-center mb-12">
+      <span class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Knowledge Base</span>
+      <h1 class="text-4xl font-extrabold text-white tracking-tight mt-3 mb-4">Frequently Asked Questions</h1>
+      <p class="text-slate-400 max-w-2xl mx-auto">Common questions regarding checkout configuration, compatibility, billing, and performance.</p>
+    </div>
+
+    <div class="space-y-4">
+      <!-- Q1 -->
+      <details class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800/80 cursor-pointer group" open>
+        <summary class="font-bold text-white flex justify-between items-center list-none text-lg">
+          <span>How does CartForge integrate into my checkout?</span>
+          <span class="text-emerald-400 font-bold group-open:rotate-180 transition">↓</span>
+        </summary>
+        <p class="mt-4 text-sm text-slate-300 leading-relaxed">
+          CartForge is built natively on Shopify’s Checkout Extensibility framework (<code class="bg-slate-800 px-2 py-0.5 rounded text-emerald-300 font-mono text-xs">purchase.checkout.block.render</code>). You position the widget directly inside the Shopify Theme and Checkout Editor by dragging the block into your desired location (e.g. above payment or order summary).
+        </p>
+      </details>
+
+      <!-- Q2 -->
+      <details class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800/80 cursor-pointer group">
+        <summary class="font-bold text-white flex justify-between items-center list-none text-lg">
+          <span>Does this app inject tracking scripts into my theme?</span>
+          <span class="text-emerald-400 font-bold group-open:rotate-180 transition">↓</span>
+        </summary>
+        <p class="mt-4 text-sm text-slate-300 leading-relaxed">
+          No. CartForge injects zero theme script tags, zero external tracking pixels, and zero bulky JavaScript bundles. All UI elements run securely within Shopify’s sandboxed web workers and are served directly from Shopify's global edge network.
+        </p>
+      </details>
+
+      <!-- Q3 -->
+      <details class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800/80 cursor-pointer group">
+        <summary class="font-bold text-white flex justify-between items-center list-none text-lg">
+          <span>How does the 1-Click Order Bump add-on work?</span>
+          <span class="text-emerald-400 font-bold group-open:rotate-180 transition">↓</span>
+        </summary>
+        <p class="mt-4 text-sm text-slate-300 leading-relaxed">
+          You select a product or variant from your catalog (for instance, Priority Shipping, Warranty Protection, or an accessory). When a shopper selects the checkbox in checkout, Shopify's native Cart API immediately appends the item to the order subtotal without reloading the page.
+        </p>
+      </details>
+
+      <!-- Q4 -->
+      <details class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800/80 cursor-pointer group">
+        <summary class="font-bold text-white flex justify-between items-center list-none text-lg">
+          <span>Can I configure multiple reward tiers?</span>
+          <span class="text-emerald-400 font-bold group-open:rotate-180 transition">↓</span>
+        </summary>
+        <p class="mt-4 text-sm text-slate-300 leading-relaxed">
+          Yes. You can define tiered milestone thresholds. For instance, Tier 1 at $50 unlocks Free Shipping, and Tier 2 at $100 unlocks a complimentary gift item. The dynamic progress bar animates smoothly as shoppers adjust cart contents.
+        </p>
+      </details>
+
+      <!-- Q5 -->
+      <details class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800/80 cursor-pointer group">
+        <summary class="font-bold text-white flex justify-between items-center list-none text-lg">
+          <span>What plans does CartForge support?</span>
+          <span class="text-emerald-400 font-bold group-open:rotate-180 transition">↓</span>
+        </summary>
+        <p class="mt-4 text-sm text-slate-300 leading-relaxed">
+          CartForge supports all Shopify merchants with access to Checkout Extensibility (including Shopify Plus, Basic, Shopify, and Advanced stores that have upgraded to Checkout Extensibility).
+        </p>
+      </details>
+
+      <!-- Q6 -->
+      <details class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800/80 cursor-pointer group">
+        <summary class="font-bold text-white flex justify-between items-center list-none text-lg">
+          <span>How do I get customer support?</span>
+          <span class="text-emerald-400 font-bold group-open:rotate-180 transition">↓</span>
+        </summary>
+        <p class="mt-4 text-sm text-slate-300 leading-relaxed">
+          Our developer support team is available via email at <a href="mailto:support@modapps.dev" class="text-emerald-400 underline font-semibold">support@modapps.dev</a>.
+        </p>
+      </details>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-8 bg-slate-950 text-center text-xs text-slate-500">
+    &copy; 2026 ModApps Development. All rights reserved.
+  </footer>
+</body>
+</html>

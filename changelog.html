@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Changelog & Release Notes — CartForge: Checkout Upsell</title>
+  <meta name="description" content="View the latest feature releases, performance optimizations, and updates for CartForge: Checkout Upsell.">
+  <link rel="icon" type="image/jpeg" href="assets/app-icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['"Plus Jakarta Sans"', 'sans-serif'] },
+          colors: { brand: { 500: '#10b981', 600: '#059669' } }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans antialiased min-h-screen flex flex-col justify-between">
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 font-bold text-white hover:text-emerald-400 transition">
+        <img src="assets/app-icon.jpg" alt="CartForge Logo" class="w-8 h-8 rounded-lg object-cover">
+        <span>CartForge</span>
+      </a>
+      <nav class="flex items-center gap-6 text-sm font-medium text-slate-400">
+        <a href="tutorial.html" class="hover:text-white transition">Tutorial</a>
+        <a href="docs.html" class="hover:text-white transition">Documentation</a>
+        <a href="faq.html" class="hover:text-white transition">FAQ</a>
+        <a href="privacy.html" class="hover:text-white transition">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-16 flex-1 w-full">
+    <div class="text-center mb-12">
+      <span class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Version History</span>
+      <h1 class="text-4xl font-extrabold text-white tracking-tight mt-3 mb-4">Product Changelog</h1>
+      <p class="text-slate-400 max-w-2xl mx-auto">Track all updates, new features, and technical improvements released for CartForge.</p>
+    </div>
+
+    <div class="space-y-10 relative before:absolute before:inset-0 before:left-5 before:w-0.5 before:bg-slate-800">
+      
+      <!-- Release 1.2.0 -->
+      <div class="relative pl-12">
+        <div class="absolute left-3.5 -translate-x-1/2 top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-slate-950"></div>
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-3">
+              <span class="text-lg font-bold text-white">v1.2.0</span>
+              <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-semibold">Latest</span>
+            </div>
+            <span class="text-xs text-slate-500">October 2026</span>
+          </div>
+          <h3 class="text-base font-semibold text-slate-200 mb-2">Checkout Extensibility Dynamic Tiers & Post-Purchase Engine</h3>
+          <ul class="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
+            <li>Added native support for dynamic multi-tier progress bar (<code class="text-xs bg-slate-800 px-1 py-0.5 rounded text-emerald-300">purchase.checkout.block.render</code>).</li>
+            <li>Introduced 1-click Order Bump directly inside native Shopify checkout.</li>
+            <li>Launched post-purchase upsell integration (<code class="text-xs bg-slate-800 px-1 py-0.5 rounded text-emerald-300">purchase.post-purchase.render</code>).</li>
+            <li>Performance upgrade: Sub-50ms execution via Shopify global CDN edge workers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Release 1.1.0 -->
+      <div class="relative pl-12">
+        <div class="absolute left-3.5 -translate-x-1/2 top-1.5 w-3.5 h-3.5 rounded-full bg-slate-700 ring-4 ring-slate-950"></div>
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <span class="text-lg font-bold text-white">v1.1.0</span>
+            <span class="text-xs text-slate-500">September 2026</span>
+          </div>
+          <h3 class="text-base font-semibold text-slate-200 mb-2">Merchant Polaris Dashboard & Real-Time Analytics</h3>
+          <ul class="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
+            <li>Rebuilt merchant admin with Shopify Polaris v12 layout patterns.</li>
+            <li>Real-time tracking of impressions, checkout conversions, and revenue lift.</li>
+            <li>Threshold simulator added to dashboard for previewing checkout states.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Release 1.0.0 -->
+      <div class="relative pl-12">
+        <div class="absolute left-3.5 -translate-x-1/2 top-1.5 w-3.5 h-3.5 rounded-full bg-slate-700 ring-4 ring-slate-950"></div>
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
+            <span class="text-lg font-bold text-white">v1.0.0</span>
+            <span class="text-xs text-slate-500">August 2026</span>
+          </div>
+          <h3 class="text-base font-semibold text-slate-200 mb-2">Initial Release</h3>
+          <ul class="text-sm text-slate-400 space-y-1.5 list-disc list-inside">
+            <li>Initial public release of CartForge engine for Shopify stores.</li>
+            <li>GraphQL Admin API integration with automated session management.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 py-8 bg-slate-950 text-center text-xs text-slate-500">
+    &copy; 2026 ModApps Development. All rights reserved.
+  </footer>
+</body>
+</html>
