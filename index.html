@@ -616,6 +616,17 @@
       document.body.classList.remove('overflow-hidden');
     }
 
+    function handleInstall(e, appDomain) {
+      e.preventDefault();
+      const input = e.target.querySelector('input[name="shop"]');
+      let shop = input.value.trim().toLowerCase();
+      shop = shop.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
+      if (!shop.includes('.')) {
+        shop = `${shop}.myshopify.com`;
+      }
+      window.location.href = `https://${appDomain}/auth/login?shop=${encodeURIComponent(shop)}`;
+    }
+
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeInstallModal();
     });
@@ -651,7 +662,7 @@
       </p>
 
       <!-- Beta Install Form -->
-      <form action="https://checkout-upsell-engine.onrender.com/auth/login" method="post" class="mt-6 space-y-4 text-left">
+      <form onsubmit="handleInstall(event, 'checkout-upsell-engine.onrender.com')" class="mt-6 space-y-4 text-left">
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
             Connect Your Shopify Store
