@@ -133,9 +133,9 @@
       </nav>
 
       <div class="flex items-center gap-4">
-        <a href="https://checkout-upsell-engine.onrender.com" target="_blank" class="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-600 rounded-xl shadow-lg shadow-brand-500/25 transition transform hover:-translate-y-0.5">
+        <button onclick="openInstallModal()" class="px-5 py-2.5 text-sm font-semibold text-white bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-600 rounded-xl shadow-lg shadow-brand-500/25 transition transform hover:-translate-y-0.5">
           Install App →
-        </a>
+        </button>
       </div>
     </div>
   </header>
@@ -157,10 +157,10 @@
       </p>
 
       <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="https://checkout-upsell-engine.onrender.com" target="_blank" class="w-full sm:w-auto px-8 py-4 text-base font-bold text-white bg-brand-600 hover:bg-brand-500 rounded-xl shadow-xl shadow-brand-600/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+        <button onclick="openInstallModal()" class="w-full sm:w-auto px-8 py-4 text-base font-bold text-white bg-brand-600 hover:bg-brand-500 rounded-xl shadow-xl shadow-brand-600/30 transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
           <span>Install CartForge on Shopify</span>
           <span>→</span>
-        </a>
+        </button>
         <a href="#simulator" class="w-full sm:w-auto px-8 py-4 text-base font-semibold text-slate-300 card-glass hover:text-white hover:border-slate-700 rounded-xl transition">
           Test Live Simulator ↓
         </a>
@@ -411,9 +411,9 @@
               </li>
             </ul>
           </div>
-          <a href="https://checkout-upsell-engine.onrender.com" target="_blank" class="mt-10 block text-center py-3.5 px-4 rounded-xl font-bold bg-slate-800 hover:bg-slate-700 text-white transition">
+          <button onclick="openInstallModal()" class="mt-10 block w-full text-center py-3.5 px-4 rounded-xl font-bold bg-slate-800 hover:bg-slate-700 text-white transition">
             Install Free
-          </a>
+          </button>
         </div>
 
         <!-- Pro Plan -->
@@ -453,9 +453,9 @@
               </li>
             </ul>
           </div>
-          <a href="https://checkout-upsell-engine.onrender.com" target="_blank" class="mt-10 block text-center py-3.5 px-4 rounded-xl font-bold bg-brand-600 hover:bg-brand-500 text-white transition shadow-lg shadow-brand-600/30">
+          <button onclick="openInstallModal()" class="mt-10 block w-full text-center py-3.5 px-4 rounded-xl font-bold bg-brand-600 hover:bg-brand-500 text-white transition shadow-lg shadow-brand-600/30">
             Start 14-Day Free Trial
-          </a>
+          </button>
         </div>
       </div>
 
@@ -596,6 +596,100 @@
         }
       });
     }
+
+    // Launching Soon Modal Handlers
+    function openInstallModal() {
+      const modal = document.getElementById('install-modal');
+      const card = modal.querySelector('.modal-card');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      card.classList.remove('scale-95');
+      card.classList.add('scale-100');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeInstallModal() {
+      const modal = document.getElementById('install-modal');
+      const card = modal.querySelector('.modal-card');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      card.classList.remove('scale-100');
+      card.classList.add('scale-95');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeInstallModal();
+    });
   </script>
+
+  <!-- Launching Soon on Shopify App Store Modal -->
+  <div id="install-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+    <!-- Backdrop -->
+    <div onclick="closeInstallModal()" class="fixed inset-0 bg-slate-950/80 backdrop-blur-md transition-opacity"></div>
+
+    <!-- Modal Card -->
+    <div class="modal-card relative w-full max-w-lg p-6 sm:p-8 rounded-3xl bg-slate-900 border border-brand-500/30 shadow-2xl shadow-brand-500/20 transform scale-95 transition-all duration-300 z-10 text-center">
+      <!-- Close Button -->
+      <button onclick="closeInstallModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-800 text-slate-400 hover:text-white flex items-center justify-center transition">
+        ✕
+      </button>
+
+      <!-- Badge & Icon -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-500/10 border border-brand-500/25 text-brand-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        <span class="w-2 h-2 rounded-full bg-brand-400 animate-pulse"></span>
+        Shopify App Store Launching Soon
+      </div>
+      
+      <div class="w-16 h-16 mx-auto rounded-2xl bg-slate-800/80 p-2 border border-slate-700 shadow-xl mb-4 flex items-center justify-center">
+        <img src="assets/app-icon.jpg" alt="CartForge Logo" class="w-full h-full object-cover rounded-xl">
+      </div>
+
+      <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        CartForge is Launching Soon!
+      </h3>
+      <p class="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
+        Our official listing is currently completing final verification with the Shopify App Review team. You can connect your store below to install early beta access today.
+      </p>
+
+      <!-- Beta Install Form -->
+      <form action="https://checkout-upsell-engine.onrender.com/auth/login" method="post" class="mt-6 space-y-4 text-left">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+            Connect Your Shopify Store
+          </label>
+          <div class="relative">
+            <input 
+              type="text" 
+              name="shop" 
+              placeholder="your-store-name.myshopify.com" 
+              required
+              class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition">
+          </div>
+          <p class="text-[11px] text-slate-400 mt-1.5">
+            Enter your <code class="text-brand-400">myshopify.com</code> handle to initiate direct Shopify authentication.
+          </p>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 px-4 rounded-xl font-bold bg-brand-600 hover:bg-brand-500 text-white text-sm shadow-lg shadow-brand-600/30 transition flex items-center justify-center gap-2">
+          <span>Install Early Beta Access</span> &rarr;
+        </button>
+      </form>
+
+      <!-- Trust Badges -->
+      <div class="mt-6 pt-5 border-t border-slate-800/80 grid grid-cols-2 gap-3 text-[11px] text-slate-400 text-left">
+        <div class="flex items-center gap-2">
+          <span class="text-brand-400 font-bold">✓</span> Native Checkout Extensibility
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-brand-400 font-bold">✓</span> 14-Day Free Trial on Launch
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-brand-400 font-bold">✓</span> Post-Purchase 1-Click Upsells
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="text-brand-400 font-bold">✓</span> Zero External Theme Scripts
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
