@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0D52BYD48"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-T0D52BYD48');
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CartForge: Checkout Upsell & Free Gift Engine | Shopify AOV Optimization</title>
@@ -8,6 +18,7 @@
   <meta name="keywords" content="Shopify upsell app, checkout extensibility, 1-click order bump, free shipping bar, free gift progress bar, post purchase upsell, AOV boost, ReConvert alternative, Shopify Plus checkout">
   <meta name="author" content="ModApps Development">
   <link rel="canonical" href="https://upsell.modapps.dev">
+  <meta name="google-site-verification" content="Rv4wKClJwZO9vWHyOmiIQEEmQM82rjacUlmUhN9wisM">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -29,19 +40,30 @@
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "CartForge: Checkout Upsell & Free Gift Engine",
-    "operatingSystem": "Shopify",
+    "operatingSystem": "Shopify Checkout Extensibility",
     "applicationCategory": "BusinessApplication",
-    "offers": {
-      "@type": "Offer",
-      "price": "0.00",
-      "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "128"
-    },
-    "description": "High-converting Shopify Checkout Extensibility engine featuring dynamic free shipping & gift progress bars, 1-click checkout order bumps, and post-purchase upsells."
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free Starter",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro Growth",
+        "price": "9.99",
+        "priceCurrency": "USD"
+      }
+    ],
+    "description": "High-converting Shopify Checkout Extensibility engine featuring dynamic free shipping & gift progress bars, 1-click checkout order bumps, and post-purchase upsells.",
+    "screenshot": [
+      "https://upsell.modapps.dev/assets/desktop_screenshot_2_storefront.jpg",
+      "https://upsell.modapps.dev/assets/mobile_screenshot_checkout.jpg",
+      "https://upsell.modapps.dev/assets/screenshot_4_post_purchase_desktop.jpg",
+      "https://upsell.modapps.dev/assets/desktop_screenshot_3_dashboard.jpg",
+      "https://upsell.modapps.dev/assets/desktop_screenshot_1_customizer.jpg"
+    ]
   }
   </script>
 
@@ -101,6 +123,7 @@
 
       <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-400">
         <a href="#features" class="hover:text-white transition">Features</a>
+        <a href="#showcase" class="hover:text-white transition">Showcase</a>
         <a href="tutorial.html" class="hover:text-white transition">Tutorial</a>
         <a href="docs.html" class="hover:text-white transition">Docs</a>
         <a href="faq.html" class="hover:text-white transition">FAQ</a>
@@ -304,6 +327,50 @@
     </div>
   </section>
 
+  <!-- Product Showcase & Screenshot Gallery Section -->
+  <section id="showcase" class="py-24 border-t border-slate-800/80 bg-slate-900/30">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-brand-400 uppercase tracking-widest px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20">Product Tour</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-4">Every Surface Built for Conversions</h2>
+        <p class="text-slate-400 text-sm mt-3">Explore how CartForge transforms the buyer journey across desktop, mobile, and merchant admin.</p>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div class="flex flex-wrap justify-center gap-3 mb-10 max-w-4xl mx-auto">
+        <button onclick="switchTab('storefront')" id="tab-btn-storefront" class="px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 border bg-brand-600 text-white border-brand-500 shadow-lg shadow-brand-600/30">
+          🛒 One-Page Checkout
+        </button>
+        <button onclick="switchTab('mobile')" id="tab-btn-mobile" class="px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 border bg-slate-900/80 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800">
+          📱 Mobile Experience
+        </button>
+        <button onclick="switchTab('postpurchase')" id="tab-btn-postpurchase" class="px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 border bg-slate-900/80 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800">
+          🎁 Post-Purchase Upsell
+        </button>
+        <button onclick="switchTab('dashboard')" id="tab-btn-dashboard" class="px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 border bg-slate-900/80 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800">
+          📊 Polaris Analytics
+        </button>
+        <button onclick="switchTab('customizer')" id="tab-btn-customizer" class="px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 border bg-slate-900/80 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800">
+          ⚙️ Checkout Customizer
+        </button>
+      </div>
+
+      <!-- Screenshot Display Container -->
+      <div class="max-w-5xl mx-auto rounded-2xl overflow-hidden card-glass border border-slate-800 shadow-2xl p-4 md:p-6">
+        <div class="rounded-xl overflow-hidden border border-slate-800/80 bg-slate-950 aspect-[16/9] flex items-center justify-center">
+          <img id="showcase-img" src="assets/desktop_screenshot_2_storefront.jpg" alt="CartForge One-Page Checkout Experience" class="w-full h-full object-contain rounded-xl transition duration-300">
+        </div>
+        <div class="mt-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-3 px-2">
+          <div>
+            <h4 id="showcase-title" class="text-lg font-bold text-white">One-Page Storefront Checkout</h4>
+            <p id="showcase-desc" class="text-xs text-slate-400 mt-1">Real-time reward progress bar calculating cart thresholds alongside a 1-click checkout order bump.</p>
+          </div>
+          <span id="showcase-badge" class="text-xs font-mono text-brand-400 px-3 py-1.5 rounded-lg bg-brand-500/10 border border-brand-500/20 whitespace-nowrap">Target: purchase.checkout.block.render</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Pricing Section -->
   <section id="pricing" class="py-24 border-t border-slate-800/80 bg-slate-900/40">
     <div class="max-w-7xl mx-auto px-6">
@@ -464,6 +531,71 @@
     subtotalSlider.addEventListener('input', updateSimulation);
     bumpCheckbox.addEventListener('change', updateSimulation);
     updateSimulation();
+
+    // Showcase switcher
+    const showcaseData = {
+      storefront: {
+        img: 'assets/desktop_screenshot_2_storefront.jpg',
+        title: 'One-Page Storefront Checkout',
+        desc: 'Real-time reward progress bar calculating cart thresholds alongside a 1-click checkout order bump.',
+        badge: 'Target: purchase.checkout.block.render',
+        alt: 'CartForge One-Page Checkout Experience'
+      },
+      mobile: {
+        img: 'assets/mobile_screenshot_checkout.jpg',
+        title: 'Mobile-Optimized Checkout Experience',
+        desc: 'Fully responsive touch targets designed for iOS and Android mobile shoppers with sub-50ms execution.',
+        badge: 'Responsive: Mobile & Tablet',
+        alt: 'CartForge Mobile Checkout Experience'
+      },
+      postpurchase: {
+        img: 'assets/screenshot_4_post_purchase_desktop.jpg',
+        title: '1-Click Post-Purchase Upsell',
+        desc: 'Capture additional revenue after initial checkout without requiring buyers to re-enter card credentials.',
+        badge: 'Target: purchase.post-purchase.render',
+        alt: 'CartForge Post-Purchase Upsell Modal'
+      },
+      dashboard: {
+        img: 'assets/desktop_screenshot_3_dashboard.jpg',
+        title: 'Shopify Polaris Merchant Analytics',
+        desc: 'Track incremental AOV lift, order bump conversion rates, and gross checkout impressions live.',
+        badge: 'Admin: Shopify Polaris UI',
+        alt: 'CartForge Merchant Polaris Dashboard'
+      },
+      customizer: {
+        img: 'assets/desktop_screenshot_1_customizer.jpg',
+        title: 'Shopify Checkout Customizer Integration',
+        desc: 'Zero-code visual block placement: drag and position directly within Shopify native checkout editor.',
+        badge: 'Theme App Extension Block',
+        alt: 'CartForge Checkout Customizer Settings'
+      }
+    };
+
+    function switchTab(key) {
+      const data = showcaseData[key];
+      if (!data) return;
+
+      const imgEl = document.getElementById('showcase-img');
+      imgEl.style.opacity = '0';
+      setTimeout(() => {
+        imgEl.src = data.img;
+        imgEl.alt = data.alt;
+        document.getElementById('showcase-title').innerText = data.title;
+        document.getElementById('showcase-desc').innerText = data.desc;
+        document.getElementById('showcase-badge').innerText = data.badge;
+        imgEl.style.opacity = '1';
+      }, 150);
+
+      const tabs = ['storefront', 'mobile', 'postpurchase', 'dashboard', 'customizer'];
+      tabs.forEach(tab => {
+        const btn = document.getElementById(`tab-btn-${tab}`);
+        if (tab === key) {
+          btn.className = 'px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 border bg-brand-600 text-white border-brand-500 shadow-lg shadow-brand-600/30';
+        } else {
+          btn.className = 'px-5 py-2.5 rounded-xl text-xs font-bold transition flex items-center gap-2 border bg-slate-900/80 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800';
+        }
+      });
+    }
   </script>
 </body>
 </html>
