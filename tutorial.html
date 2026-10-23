@@ -57,32 +57,23 @@
 
     <!-- Video Walkthrough Embed -->
     <div class="mb-16 rounded-2xl overflow-hidden border border-slate-800 bg-slate-900 shadow-2xl">
-      <div class="aspect-video w-full">
-        <iframe 
-          class="w-full h-full"
-          src="https://www.youtube.com/embed/xnd3QXY561M" 
-          title="CartForge App Walkthrough" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          allowfullscreen>
-        </iframe>
-      </div>
-      <div class="p-6 bg-slate-900 flex items-center justify-between">
-        <div>
-          <h3 class="font-bold text-white text-base">Video Walkthrough: CartForge In Action</h3>
-          <p class="text-xs text-slate-400 mt-1">Watch how to configure milestone tiers and place the checkout extension block.</p>
+      <div class="w-full rounded-2xl overflow-hidden bg-black border border-slate-800 shadow-2xl p-2 sm:p-3 mb-8">
+        <video 
+          controls 
+          preload="metadata" 
+          poster="assets/video_thumbnail_1600x900.jpg"
+          class="w-full h-auto rounded-xl shadow-inner"
+        >
+          <source src="assets/cartboost_demo_walkthrough.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="flex items-center justify-between px-4 py-3 text-xs text-slate-400 mt-1">
+          <span class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Official 1080p Walkthrough Video with English Voiceover</span>
+          <span>⚡ Native Shopify Checkout Extensibility</span>
         </div>
-        <a href="https://youtu.be/xnd3QXY561M" target="_blank" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-bold transition">
-          Open on YouTube ↗
-        </a>
       </div>
-    </div>
 
-    <!-- Step by Step Guide -->
-    <h2 class="text-2xl font-bold text-white mb-8">Step-by-Step Setup Instructions</h2>
-    <div class="space-y-8">
-      
-      <!-- Step 1 -->
+      <!-- Step 1 --><!-- Step 1 -->
       <div class="p-6 md:p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col gap-6">
         <div class="flex gap-5 items-start">
           <div class="w-10 h-10 rounded-full bg-emerald-500/10 text-emerald-400 font-extrabold flex items-center justify-center flex-shrink-0 border border-emerald-500/20 text-lg">1</div>
