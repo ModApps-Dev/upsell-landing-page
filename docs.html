@@ -13,8 +13,8 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>App Documentation & Merchant Guide — CartForge: Checkout Upsell</title>
-  <meta name="description" content="Technical documentation, merchant configuration guide, and Checkout Extensibility reference for CartForge.">
+  <title>App Documentation & Merchant Guide — CartBoost: Checkout Upsell</title>
+  <meta name="description" content="Technical documentation, merchant configuration guide, and Checkout Extensibility reference for CartBoost.">
   <link rel="icon" type="image/jpeg" href="assets/app-icon.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,8 +36,8 @@
   <header class="border-b border-slate-800 bg-slate-950/80 backdrop-blur sticky top-0 z-50">
     <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3 font-bold text-white hover:text-emerald-400 transition">
-        <img src="assets/app-icon.jpg" alt="CartForge Logo" class="w-8 h-8 rounded-lg object-cover">
-        <span>CartForge</span>
+        <img src="assets/app-icon.jpg" alt="CartBoost Logo" class="w-8 h-8 rounded-lg object-cover">
+        <span>CartBoost</span>
       </a>
       <nav class="flex items-center gap-6 text-sm font-medium text-slate-400">
         <a href="tutorial.html" class="hover:text-white transition">Tutorial</a>
@@ -51,7 +51,7 @@
   <main class="max-w-4xl mx-auto px-6 py-16 flex-1 w-full">
     <div class="text-center mb-12">
       <span class="text-xs font-semibold px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Merchant Manual</span>
-      <h1 class="text-4xl font-extrabold text-white tracking-tight mt-3 mb-4">CartForge Documentation</h1>
+      <h1 class="text-4xl font-extrabold text-white tracking-tight mt-3 mb-4">CartBoost Documentation</h1>
       <p class="text-slate-400 max-w-2xl mx-auto">Complete reference for configuring tier rewards, order bumps, checkout extensibility targets, and analytics.</p>
     </div>
 
@@ -61,7 +61,7 @@
       <section class="p-8 rounded-2xl bg-slate-900 border border-slate-800">
         <h2 class="text-2xl font-bold text-white mb-4">1. Architectural Overview & Security</h2>
         <p class="text-sm text-slate-300 leading-relaxed mb-4">
-          CartForge is built natively on Shopify's Checkout Extensibility architecture. Unlike legacy checkout apps that relied on theme code injection or custom checkout scripts (<code class="text-xs bg-slate-800 px-1 py-0.5 rounded text-emerald-300">checkout.liquid</code>), CartForge runs in an isolated, secure Web Worker sandbox provided directly by Shopify's edge infrastructure.
+          CartBoost is built natively on Shopify's Checkout Extensibility architecture. Unlike legacy checkout apps that relied on theme code injection or custom checkout scripts (<code class="text-xs bg-slate-800 px-1 py-0.5 rounded text-emerald-300">checkout.liquid</code>), CartBoost runs in an isolated, secure Web Worker sandbox provided directly by Shopify's edge infrastructure.
         </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
           <div class="p-5 rounded-xl bg-slate-800/50 border border-slate-700/50">
@@ -149,7 +149,7 @@
       <section class="p-8 rounded-2xl bg-slate-900 border border-slate-800">
         <h2 class="text-2xl font-bold text-white mb-4">5. Shopify Markets & Multi-Currency</h2>
         <p class="text-sm text-slate-300 leading-relaxed mb-4">
-          CartForge dynamically supports international stores running Shopify Markets:
+          CartBoost dynamically supports international stores running Shopify Markets:
         </p>
         <ul class="text-sm text-slate-300 space-y-2 list-disc list-inside">
           <li><strong>Presentment Currency:</strong> Threshold amounts and order bump prices automatically format in the customer's local currency (USD, EUR, GBP, CAD, AUD, etc.).</li>
@@ -164,10 +164,10 @@
           The embedded Shopify Polaris dashboard tracks real-time performance telemetry:
         </p>
         <ul class="text-sm text-slate-300 space-y-2 list-disc list-inside">
-          <li><strong>Gross Impressions:</strong> Total checkout sessions where CartForge UI extensions rendered.</li>
+          <li><strong>Gross Impressions:</strong> Total checkout sessions where CartBoost UI extensions rendered.</li>
           <li><strong>Bump Take Rate:</strong> Percentage of buyers who accepted the 1-click order bump.</li>
           <li><strong>Milestone Conversion:</strong> Percentage of orders that successfully reached the milestone tier.</li>
-          <li><strong>Incremental Revenue Lift:</strong> Net additional GMV generated exclusively by CartForge offers.</li>
+          <li><strong>Incremental Revenue Lift:</strong> Net additional GMV generated exclusively by CartBoost offers.</li>
         </ul>
       </section>
 
@@ -177,15 +177,15 @@
         <div class="space-y-4">
           <div class="p-4 rounded-xl bg-slate-800/30 border border-slate-800">
             <h4 class="text-sm font-semibold text-white mb-1">Where is the best place to position the checkout block?</h4>
-            <p class="text-xs text-slate-400">In the Shopify Checkout Customizer, placing the <strong>CartForge Checkout Bar</strong> directly above the Order Summary items or immediately above the Shipping Method selector achieves the highest conversion rates.</p>
+            <p class="text-xs text-slate-400">In the Shopify Checkout Customizer, placing the <strong>CartBoost Checkout Bar</strong> directly above the Order Summary items or immediately above the Shipping Method selector achieves the highest conversion rates.</p>
           </div>
           <div class="p-4 rounded-xl bg-slate-800/30 border border-slate-800">
-            <h4 class="text-sm font-semibold text-white mb-1">Does CartForge work with Shop Pay and express checkouts?</h4>
-            <p class="text-xs text-slate-400">Yes! Because CartForge is built on Checkout Extensibility, it is fully compatible with Shop Pay, Apple Pay, Google Pay, and PayPal Express.</p>
+            <h4 class="text-sm font-semibold text-white mb-1">Does CartBoost work with Shop Pay and express checkouts?</h4>
+            <p class="text-xs text-slate-400">Yes! Because CartBoost is built on Checkout Extensibility, it is fully compatible with Shop Pay, Apple Pay, Google Pay, and PayPal Express.</p>
           </div>
           <div class="p-4 rounded-xl bg-slate-800/30 border border-slate-800">
             <h4 class="text-sm font-semibold text-white mb-1">How are app subscriptions billed?</h4>
-            <p class="text-xs text-slate-400">All CartForge plans are billed directly through your official Shopify invoice using Shopify Recurring Application Charges. You can upgrade, downgrade, or cancel anytime in your Shopify Admin.</p>
+            <p class="text-xs text-slate-400">All CartBoost plans are billed directly through your official Shopify invoice using Shopify Recurring Application Charges. You can upgrade, downgrade, or cancel anytime in your Shopify Admin.</p>
           </div>
         </div>
       </section>
